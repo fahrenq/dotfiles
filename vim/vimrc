@@ -1,0 +1,85 @@
+" -------------------------
+" => General settings    |
+"-------------------------
+
+set nocompatible
+set encoding=utf-8
+
+execute pathogen#infect()
+filetype plugin indent on
+syntax on
+
+" Always displaying status line
+set laststatus=2
+
+" Performance stuff
+set re=1
+set lazyredraw
+
+" Indentation configurations
+set modelines=0
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Show row numbers
+set number
+set numberwidth=1
+
+" Cursor line highlight
+set cursorline
+set cursorcolumn
+set cc=80
+
+set backspace=indent,eol,start
+
+" Real-time highlight when searching with / or ?
+set hlsearch
+set incsearch
+
+"-------------------------
+" => Keybindings         |
+"-------------------------
+
+let mapleader = "\<Space>"
+
+" enter normal mode with double
+inoremap jj <ESC>
+
+" switching tabs by shift+(h/l)
+nnoremap H gT
+nnoremap L gt
+
+" macro manage
+nnoremap Q @q
+vnoremap Q :norm @q<CR>
+
+" discarding highlight from hlsearch
+nnoremap <F3> :noh<CR>
+
+" |--> Keybindings related to plugins
+
+map <C-n> :NERDTreeToggle<CR>
+
+" Remaping NERDcommenter
+map <C-_> <leader>c<Space>
+
+"-------------------------
+" => Plugins settings    |
+"-------------------------
+
+" |--> NerdTREE
+autocmd VimEnter * NERDTree
+let g:NERDTreeWinSize = 27
+autocmd VimEnter * wincmd p
+autocmd StdinReadPre * let s:std_in=1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" |--> NerdCommenter
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+
+" |--> GitGutter
+let g:gitgutter_realtime = 1
