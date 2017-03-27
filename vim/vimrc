@@ -70,15 +70,15 @@ map <C-n> :NERDTreeToggle<CR>
 " Remaping NERDcommenter
 map <C-_> <leader>c<Space>
 
-" Fuzzy finder
-nnoremap <C-t> :FZF<CR>
-
 " Easymotion
 map  <Leader>s <Plug>(easymotion-bd-f)
 nmap <Leader>s <Plug>(easymotion-overwin-f)
 
 " Syntastic
 nmap <silent> <leader>x :SyntasticToggleMode<CR>
+
+" CtrlP
+nnoremap <C-t> :CtrlP<CR>
 
 "-------------------------
 " => Plugins settings    |
