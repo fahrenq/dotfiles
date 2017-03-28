@@ -6,7 +6,7 @@ dock = false
 
 underline-size = 1
 
-background = #cc131313
+background = #0000000
 foreground = #ccD0D0D0
 linecolor =  #cc131313
 
