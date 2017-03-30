@@ -102,6 +102,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Slack"] $ws3
 assign [class="skypeforlinux"] $ws3
 
+assign [class="Geary"] $ws9
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -131,7 +132,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec compton
-exec_always feh --bg-fill "$HOME/space.png"
+exec_always feh --bg-fill "$HOME/light_sky_stars.jpg"
 
 # Reverse touchpad scrolling
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Scrolling Distance" -91, -91
@@ -156,3 +157,6 @@ gaps inner 9
 gaps outer 0
 
 for_window [class="^.*"] border pixel 1
+
+# Startup programs
+exec geary
