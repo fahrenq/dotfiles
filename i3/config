@@ -102,7 +102,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Vivaldi-stable"] $ws1
 assign [class="Slack"] $ws3
 assign [class="skypeforlinux"] $ws3
-assign [class="Geary"] $ws9
+assign [class="Evolution"] $ws9
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -159,4 +159,4 @@ gaps outer 0
 for_window [class="^.*"] border pixel 1
 
 # Startup programs
-exec geary
+exec evolution
