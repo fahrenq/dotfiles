@@ -121,6 +121,6 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri', 'jruby']
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 let g:syntastic_javascript_checkers = ['eslint']
 
-" |--> YouCompleteMe
-" let g:ycm_server_python_interpreter = '/usr/bin/python2'
-" let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" |--> Closetag
+
+let g:closetag_filenames = "*.html,*.xhtml,*.vue"
