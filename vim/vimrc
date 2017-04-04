@@ -87,6 +87,8 @@ nnoremap <F5> :UndotreeToggle<cr>
 nmap ,, <C-Y>,
 imap ,, <C-Y>,
 
+" Autoformat
+nnoremap <leader>b :Autoformat<CR>
 
 "-------------------------
 " => Plugins settings    |
