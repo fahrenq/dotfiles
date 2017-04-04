@@ -80,6 +80,10 @@ nmap <silent> <leader>x :SyntasticToggleMode<CR>
 " CtrlP
 nnoremap <C-t> :CtrlP<CR>
 
+" UndoTree
+nnoremap <F5> :UndotreeToggle<cr>
+
+
 "-------------------------
 " => Plugins settings    |
 "-------------------------
@@ -122,9 +126,7 @@ let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 let g:syntastic_javascript_checkers = ['eslint']
 
 " |--> Closetag
-
 let g:closetag_filenames = "*.html,*.erb,*.vue"
 
 " |--> Html5 plugin indentations in Vue files
-
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript.css.vue
