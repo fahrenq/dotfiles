@@ -86,6 +86,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 " Emmet
 nmap ,, <C-Y>,
 imap ,, <C-Y>,
+nnoremap <leader>e :Emmet<Space>
 
 " Autoformat
 nnoremap <leader>b :Autoformat<CR>
