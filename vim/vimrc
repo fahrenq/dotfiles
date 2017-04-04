@@ -90,6 +90,9 @@ imap ,, <C-Y>,
 " Autoformat
 nnoremap <leader>b :Autoformat<CR>
 
+" Multicursor
+let g:multi_cursor_start_key='<F6>'
+
 "-------------------------
 " => Plugins settings    |
 "-------------------------
