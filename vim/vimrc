@@ -84,8 +84,8 @@ nnoremap <C-t> :CtrlP<CR>
 nnoremap <F5> :UndotreeToggle<cr>
 
 " Emmet
-nnoremap <S-TAB> <C-Y>,
-inoremap <S-TAB> <C-Y>,
+nmap ,, <C-Y>,
+imap ,, <C-Y>,
 
 
 "-------------------------
