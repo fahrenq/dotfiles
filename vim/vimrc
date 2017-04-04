@@ -123,4 +123,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " |--> Closetag
 
-let g:closetag_filenames = "*.html,*.xhtml,*.vue"
+let g:closetag_filenames = "*.html,*.erb,*.vue"
+
+" |--> Html5 plugin indentations in Vue files
+
+autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript.css.vue
