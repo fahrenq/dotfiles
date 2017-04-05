@@ -102,7 +102,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Vivaldi-stable"] $ws1
 assign [class="Slack"] $ws3
 assign [class="skypeforlinux"] $ws3
-assign [class="Evolution"] $ws9
+assign [class="Franz"] $ws9
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -132,7 +132,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec compton
-exec_always feh --bg-fill "$HOME/light_sky_stars.jpg"
+exec_always feh --bg-fill "$HOME/lp.jpg"
 
 # Reverse touchpad scrolling
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Scrolling Distance" -91, -91
@@ -153,10 +153,12 @@ exec --no-startup-id polybar top
 workspace $ws1 gaps outer 0
 workspace $ws1 gaps inner 0
 
-gaps inner 9
-gaps outer 0
+gaps inner 10
+# gaps outer 9
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # Startup programs
-exec evolution
+exec franz-bin
+
+client.focused #A75856 #A75856 #FFFFFF #A75856
