@@ -9,6 +9,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
+bindsym $mod+Shift+Return exec termite --name floating
+
+
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -102,7 +106,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Vivaldi-stable"] $ws1
 assign [class="Slack"] $ws3
 assign [class="skypeforlinux"] $ws3
-assign [class="Franz"] $ws9
+assign [class="Evolution"] $ws9
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -132,7 +136,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec compton
-exec_always feh --bg-fill "$HOME/lp.jpg"
+exec_always feh --bg-fill "$HOME/Pictures/lpmoon.jpg"
 
 # Reverse touchpad scrolling
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS GlidePoint" "Synaptics Scrolling Distance" -91, -91
@@ -149,6 +153,7 @@ exec synclient TapButton2=3
 exec setxkbmap -layout us,ru -option grp:alt_space_toggle
 
 exec --no-startup-id polybar top
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
 workspace $ws1 gaps outer 0
 workspace $ws1 gaps inner 0
@@ -156,9 +161,26 @@ workspace $ws1 gaps inner 0
 gaps inner 10
 # gaps outer 9
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
 # Startup programs
-exec franz-bin
+exec evolution
 
-client.focused #A75856 #A75856 #FFFFFF #A75856
+# Variables para colores
+set $bg-color 	         #6c808e
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #000000
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #000000
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #000000
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #000000
+
+
+for_window [class="Termite" instance="floating"] floating enable border pixel 1
+
+focus_follows_mouse no
