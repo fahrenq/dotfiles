@@ -87,8 +87,10 @@ label-urgent-padding = 2
 
 [module/memory]
 type = internal/memory
-format = <label> <bar-used>
-label = RAM
+; format = <label> <bar-used>
+; label = RAM
+
+label = RAM %percentage_used%%
 
 bar-used-width = 10
 bar-used-foreground-0 = #aaff77
@@ -107,8 +109,9 @@ bar-used-empty-foreground = #444444
 [module/cpu]
 type = internal/cpu
 interval = 2
-format = <label> <bar-load>
-label = CPU
+; format = <label> <bar-load>
+; label = CPU
+label = CPU %percentage%%
 
 bar-load-width = 10
 bar-load-foreground-0 = #aaff77
@@ -228,8 +231,10 @@ type = internal/volume
 ; headphone_mixer = Headphone
 ; headphone_control_numid = 9
 
-format-volume = <ramp-volume> <bar-volume>
-label-muted = ─── muted ───
+; format-volume = <ramp-volume> <bar-volume>
+; format-volume = <ramp-volume> <label>
+label-volume = volume %percentage%%
+label-muted =  muted 
 label-muted-foreground = #66
 label-muted-font = 4
 

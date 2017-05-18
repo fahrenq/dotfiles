@@ -1,7 +1,9 @@
 export ZSH=/home/fahrenq/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
+# ZSH_THEME="sorin"
+# ZSH_THEME="random"
 plugins=(git ruby rails)
 
 source $ZSH/oh-my-zsh.sh
@@ -17,6 +19,11 @@ alias gcl='git clone'
 alias gch='git checkout'
 alias gpu='git pull'
 alias gl='git log --graph --abbrev-commit --decorate --date=relative --all'
+
+# js development
+alias yd='yarn run dev'
+alias yt='yarn run test'
+alias yb='yarn run build'
 
 # vim aliases
 alias vi='vim'
@@ -47,3 +54,4 @@ source $HOME/.rvm/scripts/rvm
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+source /usr/share/nvm/init-nvm.sh

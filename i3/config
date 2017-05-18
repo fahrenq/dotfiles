@@ -103,7 +103,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class="Vivaldi-stable"] $ws1
+assign [class="Chromium"] $ws1
 assign [class="Slack"] $ws3
 assign [class="skypeforlinux"] $ws3
 assign [class="Evolution"] $ws9
@@ -161,10 +161,10 @@ workspace $ws1 gaps inner 0
 gaps inner 10
 # gaps outer 9
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 # Startup programs
-exec evolution
+# exec evolution
 
 # Variables para colores
 set $bg-color 	         #6c808e

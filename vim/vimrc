@@ -89,7 +89,7 @@ imap ,, <C-Y>,
 nnoremap <leader>e :Emmet<Space>
 
 " Autoformat
-nnoremap <leader>b :Autoformat<CR>
+nnoremap <leader>b :Neoformat<CR>
 
 " Multicursor
 let g:multi_cursor_start_key='<F2>'
@@ -140,3 +140,14 @@ let g:closetag_filenames = "*.html,*.erb,*.vue"
 
 " |--> Html5 plugin indentations in Vue files
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript.css.vue
+" autocmd BufWritePre *.vue :/<script>/+1,/<\/script>/-1 !standard --fix --stdin
+
+let g:neoformat_javascript_prettier = {
+      \ 'exe': 'prettier',
+      \ 'args': ['--single-quote', '--trailing-comma es5'],
+      \ 'stdin': 1,
+      \}
+let g:neoformat_enabled_javascript = ['prettier']
+
+" |--> Python mode
+let g:pymode_python = 'python3'
