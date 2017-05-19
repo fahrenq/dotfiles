@@ -49,8 +49,13 @@ alias bi='bundle install'
 alias ra='ranger'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export GOPATH=~/code/go
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/$GOPATH/bin
+
 export PATH="$PATH:$HOME/.rvm/bin"
 source $HOME/.rvm/scripts/rvm
+
 
 export VISUAL=vim
 export EDITOR="$VISUAL"

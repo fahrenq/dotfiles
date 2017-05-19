@@ -38,9 +38,9 @@ set hlsearch
 set incsearch
 
 " Colorscheme
-set background=dark
-let g:gruvbox_italic=1
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+" set background=dark
+colorscheme onedark
 set t_Co=256
 
 "-------------------------
@@ -115,10 +115,13 @@ let g:NERDDefaultAlign = 'left'
 let g:gitgutter_realtime = 1
 
 " |--> Indent Guides
-autocmd VimEnter * IndentGuidesEnable
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['nerdtree']"
+" autocmd VimEnter * IndentGuidesEnable
+" let g:indent_guides_start_level = 2
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_exclude_filetypes = ['nerdtree']"
+
+" |--> indentLine
+let g:indentLine_char = '│'
 
 " |--> Syntastic
 set statusline+=%#warningmsg#
