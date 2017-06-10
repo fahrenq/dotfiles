@@ -1,4 +1,4 @@
-"-------------------------
+" ------------------------
 " => General settings    |
 "-------------------------
 
@@ -22,6 +22,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Folding config
+set foldmethod=indent
+set foldlevel=20
+
 " Show row numbers
 set number
 set numberwidth=1
@@ -37,11 +41,22 @@ set backspace=indent,eol,start
 set hlsearch
 set incsearch
 
+if (empty($TMUX))
+  if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
 " Colorscheme
-" let g:gruvbox_italic=1
-" set background=dark
-colorscheme onedark
+set background=dark        " for the light version
+let g:one_allow_italics = 1 " I love italic for comments
+colorscheme one
 set t_Co=256
+
+" let base16colorspace=256
 
 "-------------------------
 " => Keybindings         |
@@ -122,6 +137,7 @@ let g:gitgutter_realtime = 1
 
 " |--> indentLine
 let g:indentLine_char = '│'
+let g:indentLine_setColors = 0
 
 " |--> Syntastic
 set statusline+=%#warningmsg#
@@ -152,5 +168,16 @@ let g:neoformat_javascript_prettier = {
       \}
 let g:neoformat_enabled_javascript = ['prettier']
 
+let g:neoformat_python_autopep8 = {
+            \ 'args': ['-s 4', '-E'],
+            \ 'replace': 1,
+            \ 'stdin': 1,
+            \ 'no_append': 1,
+            \ }
+let g:neoformat_enabled_python = ['autopep8', 'yapf']
+
 " |--> Python mode
 let g:pymode_python = 'python3'
+
+" |--> vim-go config
+let g:go_fmt_command = "goimports"
